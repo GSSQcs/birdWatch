@@ -21,4 +21,5 @@ const birdsCollectionSlice = createSlice({
     }
 });
 
+export const {addBirdToCollection, removeBirdFromCollection} = birdsCollectionSlice.actions
 export default birdsCollectionSlice.reducer
