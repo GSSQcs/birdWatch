@@ -14,6 +14,9 @@ const birdsCollectionSlice = createSlice({
     reducers: {
         addBirdToCollection: (state, action: PayloadAction<object>) => {
             state.birdsCollection.push(action.payload);
+        },
+        removeBirdFromCollection: (state, action: PayloadAction<object>) =>{
+            state.birdsCollection = state.birdsCollection.filter(bird => bird.name !== action.payload)
         }
     }
 });
