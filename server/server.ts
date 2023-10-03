@@ -3,6 +3,10 @@ import cookieParser from 'cookie-parser';
 import ebirdRouter from './routes/ebirdRouter';
 // import path from 'path';
 
+// Env configs - why do we need to do this in every file?
+import dotenv from 'dotenv';
+dotenv.config();
+
 // Initialize Express
 const app = express();
 const PORT = process.env.PORT || 3000;

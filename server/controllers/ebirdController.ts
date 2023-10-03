@@ -1,12 +1,17 @@
 import { Request, Response, NextFunction } from 'express';
 
+// Import dotenv variables
+import dotenv from 'dotenv';
+dotenv.config();
+const EBIRD_API_KEY = process.env.EBIRD_API_KEY;
+
 const ebirdController: any = {};
 
 ebirdController.getBirds = function (_req: Request, _res: Response, next: NextFunction) {
   console.log('ebirdController.getBirds invoked');
 
   const myHeaders = new Headers();
-  myHeaders.append("X-eBirdApiToken", "3ad9r5c0g9c1");
+  myHeaders.append("X-eBirdApiToken", `${EBIRD_API_KEY}`);
 
   const requestOptions: any = {
     method: 'GET',
