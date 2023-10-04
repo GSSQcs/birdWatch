@@ -30,7 +30,6 @@ app.use('/api/ebird', ebirdRouter);
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   const defaultErr = {
     //detailed message to dev
-    //HELLO I AM STILL IN YOUR LIVESHARE, OK BYE - SAM
     log:
       `Express error handler caught unknown middleware error. Error: ${err}`,
     status: 400,
