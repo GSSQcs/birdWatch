@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cookieParser from 'cookie-parser';
 import ebirdRouter from './routes/ebirdRouter';
+import rangeCodeRouter from './routes/rangeCodeRouter';
 // import path from 'path';
 
 // Env configs - why do we need to do this in every file?
@@ -24,13 +25,13 @@ app.use(cookieParser()); // Parse cookies
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
+app.use('/', rangeCodeRouter);
 app.use('/api/ebird', ebirdRouter);
 
 //global error handler
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   const defaultErr = {
     //detailed message to dev
-    //HELLO I AM STILL IN YOUR LIVESHARE, OK BYE - SAM
     log:
       `Express error handler caught unknown middleware error. Error: ${err}`,
     status: 400,
