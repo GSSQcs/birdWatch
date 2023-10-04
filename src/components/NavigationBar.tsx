@@ -1,20 +1,23 @@
+import logo from '../assets/bird_watching_logo-1.png'
+
+
 export function NavigationBar() {
     return (
-        <div id='navigation-bar'>
+        <div id='navigation-bar' className="flex-container">
             <div id='logo'>
-                Logo goes here
+                <img src={logo} alt="logo" />
             </div>
             <div id='navigation-bar-title'>
-                App name goes here
+                Bird Watch
             </div>
-            <div id='nagivation-bar-view-region'>
+            {/* <div id='nagivation-bar-view-region'>
                 Search a Region goes here
-            </div>
+            </div> */}
             <div id='navigation-bar-collection'>
-                My Collection link here
+                <a href="#">My Collection link here</a>
             </div>
             <div id='navigation-bar-username'>
-                Username goes here
+                <a href="#">Username goes here</a>
             </div>
         </div>
     )

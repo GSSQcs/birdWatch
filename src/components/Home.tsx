@@ -1,19 +1,24 @@
 import React from "react";
 import '../stylesheets/Home.css'
 import SearchBar from "./SearchBar";
+import { Bird } from "./Bird";
+import ResultsContainer from "./ResultsContainer";
+import { NavigationBar } from "./NavigationBar";
 
 
 
 const Home = () => {
-
+    const data = ['One', 'Two', 'Three', 'Four', 'Five'];
     return (
         <>
-        <nav className="navbar"><h2>Bird Watch</h2></nav>
-        <div className="search-bar"><input type="text" placeholder="location"/>
-        <SearchBar/></div>
+        <nav className="navbar"><NavigationBar /></nav>
+        
+        <SearchBar />
         <div className="content">
-            <div></div>
+            <ResultsContainer/>
+        
         </div>
+
         </>
     )
 
