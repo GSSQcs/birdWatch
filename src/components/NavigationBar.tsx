@@ -14,10 +14,10 @@ export function NavigationBar() {
                 Search a Region goes here
             </div> */}
             <div id='navigation-bar-collection'>
-                <a href="#">My Collection link here</a>
+                <a href="#">Collection</a>
             </div>
             <div id='navigation-bar-username'>
-                <a href="#">Username goes here</a>
+                <a href="#">John Doe</a>
             </div>
         </div>
     )

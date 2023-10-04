@@ -11,6 +11,9 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 1em;
+    text-align: center;
+    width: 100%;
 }
 
 .flex-container {
@@ -69,6 +72,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
+.search-bar select {
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 150px; 
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
 
 .search-bar button {
     background-color: #007bff;
@@ -92,5 +103,56 @@ body {
     background-position: center;
     flex-direction: column;
     justify-content: center;
-    opacity: 0.8;
+    opacity: 
+    0.8;
+}
+
+.content {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+
+.checkboxs {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid;
+}
+
+.resultsHeader {
+    background-color: #80c2e8;
+
+}
+
+.span-three button {
+
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    margin-left: 3em;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+
+}
+
+.grid-item {
+    /* border-bottom: 1px solid; */
+}
+
+.name-item, .checkboxs {
+    /* border-left: 1px solid; */
+
+}
+
+.location-item {
+
+}
+
+.date-item {
+
 }

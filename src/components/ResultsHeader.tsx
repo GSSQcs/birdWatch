@@ -6,20 +6,20 @@ const ResultsHeader = () => {
 
     return (
         <>
-        <div>
-                <span>
+        <div className="resultsHeader">
+                <h2>
                     Species
-                </span>
+                </h2>
             </div>
-            <div>
-                <span>
+            <div className="resultsHeader">
+                <h2>
                     Date
-                </span>
+                </h2>
             </div>
-            <div>
-                <span>
+            <div className="resultsHeader">
+                <h2>
                     Location
-                </span>
+                </h2>
 
             </div>
         </>

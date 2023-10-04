@@ -14,9 +14,8 @@ const Home = () => {
         <nav className="navbar"><NavigationBar /></nav>
         
         <SearchBar />
-        <div className="content">
+        <div className="content flex-container">
             <ResultsContainer/>
-        
         </div>
 
         </>
