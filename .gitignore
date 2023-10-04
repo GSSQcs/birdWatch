@@ -30,5 +30,11 @@ dist-ssr
 *.sln
 *.sw?
 
+hooks/*
+hooks
+reducers/*
+reducers
+src/store/accountSlice.ts
+components/AccountCreation.tsx
 # ENV variables
 .env
