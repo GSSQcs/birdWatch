@@ -32,8 +32,6 @@ export function Bird({ comName,  obsDt, locName }: BirdProps) {
 
     const handleADDToWishlist = (e) => {
 
-
-
         // if(!birdSightings.birdSightings.length) return
 
         // console.log('boolean checklist',e.target.checked)
@@ -41,14 +39,10 @@ export function Bird({ comName,  obsDt, locName }: BirdProps) {
 
         // setIsChecked(e.target.checked)
        
-
         // console.log('isChecked after setIsChecked', isChecked);
 
         // //adding to collection
         // if(isChecked){
-
-
-
             const newBird = birdSightings.birdSightings.filter(bird=> bird.comName === comName)
             dispatch(addBirdToWishlist(newBird[0]))
 
@@ -61,7 +55,6 @@ export function Bird({ comName,  obsDt, locName }: BirdProps) {
         //     dispatch(removeBirdFromWishlist(birdsWishlist.filter(bird=> bird.comName === comName)[0]));
             
         // }
-        
     }
     
     

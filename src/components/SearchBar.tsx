@@ -1,34 +1,37 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { setBirdSightings } from "../store/birdSightingsSlice";
+// Import dotenv variables
+import dotenv from 'dotenv';
 
 
 
 const SearchBar = ({suggestions}) => {
 
+    dotenv.config();
+    const EBIRD_API_KEY = process.env.EBIRD_API_KEY;
+
     const dispatch = useDispatch();
 
     const getBirds = (stateCode) => {
-
         console.log('state code', stateCode)
 
-
         const myHeaders = new Headers();
-        myHeaders.append("X-eBirdApiToken", `3ad9r5c0g9c1`);
+        myHeaders.append("X-eBirdApiToken", `${EBIRD_API_KEY}`);
+
+
 
         const requestOptions: any = {
             method: 'GET',
             headers: myHeaders,
             redirect: 'follow'
           };
-        
           fetch(`https://api.ebird.org/v2/data/obs/${stateCode}/recent`, requestOptions)
           .then(response => response.json()) // was .text()
           .then(result => {
-            
-            dispatch(setBirdSightings(result.slice(0,20)))
+            // dispatch(setBirdSightings(result.slice(0,20)))
+            dispatch(setBirdSightings(result))
           })
-
     }
 
     

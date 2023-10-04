@@ -9,9 +9,6 @@ export function ResultsContainer() {
     const [birdArray, setBirdArray] = useState([])
     const birdSightings = useSelector(state => state.birdSightings);
     
-    
-    
-    
 /**
  * 
  * speciesCode(pin):"turvul"
@@ -31,22 +28,30 @@ subId(pin):"S151365685"
 // const birdArray: any[] = [];
 const arrayOfBirds = [];
 useEffect(() => {
-    
     if(birdSightings.birdSightings.length) {
     console.log('passing')
     console.log(birdSightings);
 
-
-
-    for(let i = 0; i < 20; i++) {
+    // for(let i = 0; i < 20; i++) {
+    //     arrayOfBirds.push(
+    //         <Bird
+    //         comName = {birdSightings.birdSightings[i].comName}
+    //         obsDt = {birdSightings.birdSightings[i].obsDt}
+    //         locName = {birdSightings.birdSightings[i].locName}
+    //         />
+    //         )
+    // }
+   for(const key in birdSightings) {
+    for(const bird of birdSightings[key]) {
         arrayOfBirds.push(
-            <Bird
-            comName = {birdSightings.birdSightings[i].comName}
-            obsDt = {birdSightings.birdSightings[i].obsDt}
-            locName = {birdSightings.birdSightings[i].locName}
+            <Bird 
+            comName = {bird.comName}
+            obsDt = {bird.obsDt}
+            locName = {bird.locName}
             />
-            )
-        }
+        );
+    }
+   }
     setBirdArray(arrayOfBirds);   
     console.log('birdArray', birdArray) 
     }
@@ -78,12 +83,7 @@ useEffect(() => {
     //     obsDt = 'test date'
     //     locName = 'test name'
     //     />
-    // ] 
-
-    
-
-
-    
+    // ]    
 
     return (
         <div className='grid-container'>

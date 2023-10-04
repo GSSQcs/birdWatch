@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface BirdSightingsState {
-    birdSightings: object[];
+    birdSightings: object;
 }
 
 const initialState: BirdSightingsState = {
-    birdSightings: []
+    birdSightings: {}
 }
 
 const birdSightingsSlice = createSlice({
