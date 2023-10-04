@@ -11,7 +11,7 @@ router.get('/',
   },
   ebirdController.getBirds,
   (_req: Request, res: Response) => {
-  return res.send('sent response to client')
+  return res.json(res.locals.birds);
   }
 )
 

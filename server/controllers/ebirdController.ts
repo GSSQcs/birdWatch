@@ -7,7 +7,7 @@ const EBIRD_API_KEY = process.env.EBIRD_API_KEY;
 
 const ebirdController: any = {};
 
-ebirdController.getBirds = function (_req: Request, _res: Response, next: NextFunction) {
+ebirdController.getBirds = function (_req: Request, res: Response, next: NextFunction) {
   console.log('ebirdController.getBirds invoked');
 
   const myHeaders = new Headers();
@@ -22,7 +22,7 @@ ebirdController.getBirds = function (_req: Request, _res: Response, next: NextFu
   fetch("https://api.ebird.org/v2/data/obs/US/recent", requestOptions)
   .then(response => response.json()) // was .text()
   .then(result => {
-    console.log(result);
+    res.locals.birds= result;
     return next();
   })
   .catch(error => console.log('error', error));
