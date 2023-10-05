@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import cookieParser from 'cookie-parser';
 import ebirdRouter from './routes/ebirdRouter';
 import rangeCodeRouter from './routes/rangeCodeRouter';
+import cors from 'cors'
 // import path from 'path';
 
 // Env configs - why do we need to do this in every file?
@@ -15,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 // // CORS
 // const cors = require('cors'); 
 // app.use(cors({ origin: 'link', methods: ["POST", "GET"], credentials: true }));
-
+app.use(cors());
 // Serve static assets
 // app.use('/', express.static(path.join(__dirname, '/index.html')));
 

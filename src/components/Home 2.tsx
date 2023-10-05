@@ -8,14 +8,15 @@ import { NavigationBar } from "./NavigationBar";
 
 
 const Home = () => {
-    const data = ['One', 'Two', 'Three', 'Four', 'Five'];
+
     return (
         <>
         <nav className="navbar"><NavigationBar /></nav>
+        <div className="search-bar"><input type="text" placeholder="location"/>
+        <SearchBar/></div>
+        <div className="content">
+            <ResultsContainer></ResultsContainer>
         
-        <SearchBar />
-        <div className="content flex-container">
-            <ResultsContainer/>
         </div>
 
         </>

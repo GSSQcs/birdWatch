@@ -1,0 +1,27 @@
+*, *::before, *::after {box-sizing: inherit;}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.flex-container {
+    display: flex;
+    align-content: items;
+}
+
+.span-three {
+    grid-column: span 3;
+  }
+
+.bird {
+    border: 1px solid;
+}

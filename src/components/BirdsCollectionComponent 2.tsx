@@ -16,7 +16,7 @@ const BirdsCollectionComponent: React.FC<BirdsCollectionProps> = (props: object)
             color: 'blue'
         }
 
-        dispatch(addBirdToWishlist(newBird))
+        dispatch(addBirdToCollection(newBird))
     }
 
     return (
