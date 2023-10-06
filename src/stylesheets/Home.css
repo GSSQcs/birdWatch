@@ -1,0 +1,158 @@
+*, *::before, *::after {box-sizing: inherit;}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    align-content: items;
+}
+
+.span-three {
+    grid-column: span 3;
+  }
+
+.bird {
+    border: 1px solid;
+}
+
+#navigation-bar{
+    border: 1px solid;
+    align-items: center;
+    background-color: rgb(8, 8, 8);
+    color: rgb(241, 234, 234);
+}
+
+#logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+#navigation-bar-collection {
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+#navigation-bar-username{
+    margin-right: 20px;
+}
+
+#navigation-bar a {
+    text-decoration: none;
+    color: rgb(241, 234, 234);
+    transition: color 0.3s; 
+    
+} 
+
+#navigation-bar a:hover {
+    color: rgb(105, 218, 243); 
+}
+
+.search-bar {
+    justify-content: center;    
+}
+
+.search-bar input {
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.search-bar select {
+    padding: 0.5em;
+    border-radius: 5px;
+    width: 150px; 
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+
+.search-bar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 0.2em;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.search-section {
+    background-image: url('https://chirpforbirds.com/wp-content/uploads/2020/03/Blog-featured-image-Canadian-geese.jpg') ;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 
+    0.8;
+}
+
+.content {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+
+.checkboxs {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid;
+}
+
+.resultsHeader {
+    background-color: #80c2e8;
+
+}
+
+.span-three button {
+
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    margin-left: 3em;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+
+}
+
+.grid-item {
+    /* border-bottom: 1px solid; */
+}
+
+.name-item, .checkboxs {
+    /* border-left: 1px solid; */
+
+}
+
+.location-item {
+
+}
+
+.date-item {
+
+}
